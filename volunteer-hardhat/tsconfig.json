@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node", "hardhat/deployments"],
+    "outDir": "dist"
+  },
+  "include": ["hardhat.config.ts", "deploy", "scripts", "test", "typechain-types"],
+  "exclude": ["node_modules"]
+}
+
+
+
