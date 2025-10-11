@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/VolunteerLike.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract VolunteerLike {\n    // recordId => like count\n    mapping(uint256 => uint256) public likes;\n    // recordId => user => liked\n    mapping(uint256 => mapping(address => bool)) public liked;\n\n    event Liked(uint256 indexed recordId, address indexed user, bool like, uint256 total);\n\n    function toggleLike(uint256 recordId) external returns (bool like, uint256 total) {\n        bool prev = liked[recordId][msg.sender];\n        if (prev) {\n            liked[recordId][msg.sender] = false;\n            uint256 c = likes[recordId];\n            likes[recordId] = c > 0 ? c - 1 : 0;\n        } else {\n            liked[recordId][msg.sender] = true;\n            likes[recordId] += 1;\n        }\n        emit Liked(recordId, msg.sender, !prev, likes[recordId]);\n        return (!prev, likes[recordId]);\n    }\n\n    function getLike(uint256 recordId, address user) external view returns (bool, uint256) {\n        return (liked[recordId][user], likes[recordId]);\n    }\n}\n\n\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

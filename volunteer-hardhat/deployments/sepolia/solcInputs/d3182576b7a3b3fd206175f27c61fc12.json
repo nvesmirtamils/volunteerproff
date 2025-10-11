@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/VolunteerComment.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract VolunteerComment {\n    struct Comment {\n        address user;\n        string text;\n        uint64 timestamp;\n    }\n\n    mapping(uint256 => Comment[]) private _comments;\n\n    event Commented(uint256 indexed recordId, address indexed user, string text);\n\n    function addComment(uint256 recordId, string calldata text) external {\n        _comments[recordId].push(Comment({\n            user: msg.sender,\n            text: text,\n            timestamp: uint64(block.timestamp)\n        }));\n        emit Commented(recordId, msg.sender, text);\n    }\n\n    function getCount(uint256 recordId) external view returns (uint256) {\n        return _comments[recordId].length;\n    }\n\n    function getWindow(\n        uint256 recordId,\n        uint256 start,\n        uint256 count\n    ) external view returns (address[] memory users, string[] memory texts, uint64[] memory timestamps) {\n        Comment[] storage arr = _comments[recordId];\n        uint256 end = start + count;\n        if (end > arr.length) end = arr.length;\n        uint256 size = end > start ? end - start : 0;\n        users = new address[](size);\n        texts = new string[](size);\n        timestamps = new uint64[](size);\n        for (uint256 i = 0; i < size; i++) {\n            Comment storage c = arr[start + i];\n            users[i] = c.user;\n            texts[i] = c.text;\n            timestamps[i] = c.timestamp;\n        }\n    }\n}\n\n\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

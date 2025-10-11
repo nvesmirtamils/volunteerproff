@@ -1,0 +1,222 @@
+{
+  "address": "0x1345DDfF9Ee622Bf081c6aCe8cA8fB9BD75804A5",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "recordId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "like",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "total",
+          "type": "uint256"
+        }
+      ],
+      "name": "Liked",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "recordId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getLike",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "liked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "likes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "recordId",
+          "type": "uint256"
+        }
+      ],
+      "name": "toggleLike",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "like",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6b31b319b51a65179a453b9ad4879f130dd18d9de4404d4fad6e91e21ac3a1bc",
+  "receipt": {
+    "to": null,
+    "from": "0xDa05A9D17aF6b48dEa077409aB9B80F7F8aC20d7",
+    "contractAddress": "0x1345DDfF9Ee622Bf081c6aCe8cA8fB9BD75804A5",
+    "transactionIndex": 48,
+    "gasUsed": "225618",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x28bd124812cb9daaa3bc6eca21db2906842d9027b4653de48bc5556ec40cac2d",
+    "transactionHash": "0x6b31b319b51a65179a453b9ad4879f130dd18d9de4404d4fad6e91e21ac3a1bc",
+    "logs": [],
+    "blockNumber": 9408228,
+    "cumulativeGasUsed": "4861958",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "165d6f8c90282493a233cf1b24ca6bf9",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"recordId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"like\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"name\":\"Liked\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"recordId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getLike\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"liked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"likes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"recordId\",\"type\":\"uint256\"}],\"name\":\"toggleLike\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"like\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/VolunteerLike.sol\":\"VolunteerLike\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/VolunteerLike.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.24;\\n\\ncontract VolunteerLike {\\n    // recordId => like count\\n    mapping(uint256 => uint256) public likes;\\n    // recordId => user => liked\\n    mapping(uint256 => mapping(address => bool)) public liked;\\n\\n    event Liked(uint256 indexed recordId, address indexed user, bool like, uint256 total);\\n\\n    function toggleLike(uint256 recordId) external returns (bool like, uint256 total) {\\n        bool prev = liked[recordId][msg.sender];\\n        if (prev) {\\n            liked[recordId][msg.sender] = false;\\n            uint256 c = likes[recordId];\\n            likes[recordId] = c > 0 ? c - 1 : 0;\\n        } else {\\n            liked[recordId][msg.sender] = true;\\n            likes[recordId] += 1;\\n        }\\n        emit Liked(recordId, msg.sender, !prev, likes[recordId]);\\n        return (!prev, likes[recordId]);\\n    }\\n\\n    function getLike(uint256 recordId, address user) external view returns (bool, uint256) {\\n        return (liked[recordId][user], likes[recordId]);\\n    }\\n}\\n\\n\\n\",\"keccak256\":\"0x64b1aea7fdbb25b4412715942a7ee0763f3e6661b28af1540e121e69612f71c2\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061031e806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806302c427871461005157806354398d18146100945780637e9dffe6146100be5780639df77574146100ec575b600080fd5b61007f61005f366004610251565b600160209081526000928352604080842090915290825290205460ff1681565b60405190151581526020015b60405180910390f35b6100a76100a236600461028d565b610130565b60408051921515835260208301919091520161008b565b6100de6100cc36600461028d565b60006020819052908152604090205481565b60405190815260200161008b565b6100a76100fa366004610251565b60008281526001602090815260408083206001600160a01b0394909416835292815282822054938252819052205460ff90911691565b6000818152600160209081526040808320338452909152812054819060ff1680156101ac5760008481526001602090815260408083203384528252808320805460ff19169055868352908290529020548061018c576000610197565b6101976001826102bc565b600086815260208190526040902055506101ef565b60008481526001602081815260408084203385528252808420805460ff1916841790558784529083905282208054919290916101e99084906102d5565b90915550505b600084815260208181526040918290205482518415815291820152339186917ff64872bc5caf1365f420ea1c84412850819a322d0626f5084645479b7c0c5627910160405180910390a360009384526020849052604090932054921593915050565b6000806040838503121561026457600080fd5b8235915060208301356001600160a01b038116811461028257600080fd5b809150509250929050565b60006020828403121561029f57600080fd5b5035919050565b634e487b7160e01b600052601160045260246000fd5b818103818111156102cf576102cf6102a6565b92915050565b808201808211156102cf576102cf6102a656fea2646970667358221220ae0c5ba03ca8dad52378608fc6a8cc11829cdbb949d1531cf7c483024d27efd464736f6c63430008180033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806302c427871461005157806354398d18146100945780637e9dffe6146100be5780639df77574146100ec575b600080fd5b61007f61005f366004610251565b600160209081526000928352604080842090915290825290205460ff1681565b60405190151581526020015b60405180910390f35b6100a76100a236600461028d565b610130565b60408051921515835260208301919091520161008b565b6100de6100cc36600461028d565b60006020819052908152604090205481565b60405190815260200161008b565b6100a76100fa366004610251565b60008281526001602090815260408083206001600160a01b0394909416835292815282822054938252819052205460ff90911691565b6000818152600160209081526040808320338452909152812054819060ff1680156101ac5760008481526001602090815260408083203384528252808320805460ff19169055868352908290529020548061018c576000610197565b6101976001826102bc565b600086815260208190526040902055506101ef565b60008481526001602081815260408084203385528252808420805460ff1916841790558784529083905282208054919290916101e99084906102d5565b90915550505b600084815260208181526040918290205482518415815291820152339186917ff64872bc5caf1365f420ea1c84412850819a322d0626f5084645479b7c0c5627910160405180910390a360009384526020849052604090932054921593915050565b6000806040838503121561026457600080fd5b8235915060208301356001600160a01b038116811461028257600080fd5b809150509250929050565b60006020828403121561029f57600080fd5b5035919050565b634e487b7160e01b600052601160045260246000fd5b818103818111156102cf576102cf6102a6565b92915050565b808201808211156102cf576102cf6102a656fea2646970667358221220ae0c5ba03ca8dad52378608fc6a8cc11829cdbb949d1531cf7c483024d27efd464736f6c63430008180033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 5,
+        "contract": "contracts/VolunteerLike.sol:VolunteerLike",
+        "label": "likes",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_uint256,t_uint256)"
+      },
+      {
+        "astId": 11,
+        "contract": "contracts/VolunteerLike.sol:VolunteerLike",
+        "label": "liked",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => mapping(address => bool))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_bool)"
+      },
+      "t_mapping(t_uint256,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
