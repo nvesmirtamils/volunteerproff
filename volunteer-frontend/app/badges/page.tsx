@@ -66,11 +66,12 @@ export default function BadgesPage() {
       const contract = new ethers.Contract(badgeAddr, VolunteerBadgeABI.abi, provider);
       let me = ethers.ZeroAddress;
       try {
-        me = signer ? await signer.getAddress() : await provider.getSigner().getAddress();
+        me = signer ? await signer.getAddress() : await (await provider.getSigner()).getAddress();
       } catch {
         await provider.send("eth_requestAccounts", []);
-        me = await provider.getSigner().getAddress();
-        setSigner(await provider.getSigner());
+        const s = await provider.getSigner();
+        me = await s.getAddress();
+        setSigner(s);
       }
       if (me !== ethers.ZeroAddress) {
         const lvl: number = Number(await contract.highestLevel(me));
